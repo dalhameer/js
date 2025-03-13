@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+
+  <style>
+    body{
+    text-align: center;
+    margin-top: 250px;
+}
+h1 {
+    color: dimgray;
+}
+span {
+    color: #ff7d32;
+}
+.controls {
+    margin-bottom: 70px;
+}
+:root{
+    --Space : 10px;
+    --Blur : 5px;
+    --Color : #aa0606;
+}
+img{
+    padding: var(--Space);
+    background: var(--Color);
+    filter: blur(var(--Blur));
+}
+  </style>
+   
+
+  <h1>Variabl Changing <span>By JS</span></h1>
+  
+  <div class="controls">
+
+    <label>Space</label>
+    <input type="range" name="Space" value="20" min="20" max="200" data-sizing="px">
+
+    <label>Blur</label>
+    <input type="range" name="Blur" value="10" min="0" max="25" data-sizing="px">
+
+
+    <label>Background</label>
+    <input type="color" name="Color" value="#696969">
+
+
+
+  </div>
+<img src="M3JBYW4lFKN1Id6UNk1s969Y.webp" alt="">
+  
+<script>
+    const space = document.querySelector('[name="Space"]');
+    const blur = document.querySelector('[name="Blur"]');
+    const color = document.querySelector('[name="Color"]');
+
+    space.addEventListener('input',function(){
+       document.documentElement.style.setProperty('--Space',space.value +'px');
+    });
+
+    blur.addEventListener('input',function(){
+       document.documentElement.style.setProperty('--Blur',blur.value +'px');
+    });
+  
+    
+    color.addEventListener('input',function(){
+       document.documentElement.style.setProperty('--Color',color.value);
+    });
+
+
+</script>
+
+</body>
+</html>

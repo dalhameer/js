@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Changing</title>
+</head>
+<body>
+    <style>
+        #r{
+            background-color: red;
+        }
+        #g{
+            background-color: green;
+        }
+        #b{
+            background-color: blue;
+        }
+    </style>
+
+
+    <h1>Style Changing Button</h1>
+
+    <button id="r">Red</button>
+    <button id="g">Green</button>
+    <button id="b">blue</button>
+
+    <script>
+       document.getElementById('r').addEventListener('click',function(){
+           document.body.style.backgroundColor="red";
+       });
+
+       document.getElementById('g').addEventListener('click',function(){
+          document.body.style.backgroundColor="green";
+       });
+
+       document.getElementById('b').addEventListener('click',function(){
+          document.body.style.backgroundColor="blue";
+       });
+    </script>
+</body>
+</html>
