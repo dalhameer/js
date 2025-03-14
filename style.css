@@ -1,0 +1,50 @@
+body {
+    background-color: cadetblue;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.todobox {
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 500px;
+    border-radius: 6px;
+}
+.form-group {
+    max-width: 85%;
+    margin: auto;
+    padding-top: 20px;
+    text-align: center;
+}
+li {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+}
+ul#ul_id {
+    list-style: none;
+    padding-left: 0;
+}
+button.cross {margin-left: 89px;}
+
+input#inp:focus {
+    border: 1px solid #959595;
+    outline: 0;
+}
+input#inp {
+    padding: 5px 18px;
+    border: none;
+    border-radius: 2px;
+}
+button.add {
+    padding: 5px 16px;
+    background-color: #000000;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    font-weight: bold;
+}

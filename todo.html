@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>To-Do-List</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <div class="todobox">
+            <div class="form-group">
             <input type="text" id="inp">
-            <button onclick="todofun()">Add</button>
+            <button onclick="todofun()" class="add">Add</button>
             <ul id="ul_id">
                  
             </ul>
+        </div>
         </div>
     </div>
 
@@ -22,7 +25,7 @@
             if(!user_text) return;
             var li = document.createElement('li');
             
-            li.innerHTML = `${user_text}.<button onClick="this.parentNode.remove()">❌</button>`
+            li.innerHTML = `${user_text}.<button onClick="this.parentNode.remove()" class="cross">❌</button>`
             li.onclick=()=>li.classList.toggle("completed");
             ul_id.appendChild(li);
             inp.value="";
