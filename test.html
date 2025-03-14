@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        body{
+       text-align: center;
+       margin-top: 200px;
+   }
+   h1 {
+    color: dimgray;
+}
+.controls {
+    margin-bottom: 70px;
+}
+
+:root{
+    --sp: 300px;
+    --bl: 5px;
+    --co: #aa0606;
+}
+
+img{
+    height: var(--sp);
+    background: var(--co);
+    filter: blur(var(--bl));
+    padding: 10px;
+}
+
+
+   </style>
+
+
+    <h1>Variable Changing by Js</h1>
+    <div class="controls">
+
+        <label>Space</label>
+        <input type="range" name="sp" value="100" min="20" max="300" data-sizing="px">
+
+        <label>Blur</label>
+        <input type="range" name="bl" value="10" min="0" max="25" data-sizing="px">
+        
+        <label>Color</label>
+        <input type="color" name="co" value="#696969">
+    </div>
+    <img src="M3JBYW4lFKN1Id6UNk1s969Y.webp" alt="">
+
+    <script>
+        const space = document.querySelector('[name="sp"]');
+        const blur = document.querySelector('[name="bl"]');
+        const color = document.querySelector('[name="co"]');
+
+        space.addEventListener('input',function(){
+           document.documentElement.style.setProperty('--sp',space.value +'px');
+        });
+
+        blur.addEventListener('input',function(){
+            document.documentElement.style.setProperty('--bl',blur.value +'px');
+        })
+
+        color.addEventListener('input',function(){
+       document.documentElement.style.setProperty('--co',color.value);
+    });
+
+    </script>
+</body>
+</html>
