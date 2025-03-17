@@ -70,3 +70,9 @@ button.add:hover {
     background-color: black;
     transition: 0.5s;
 }
+
+
+.wrap-inside {
+    background-color: black;
+    color: white;
+}

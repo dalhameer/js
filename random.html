@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quoates</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="wrap-inside">
+    <h1>Get Random Quoates from here!</h1>
+    <button onclick="randomQuoates()">Click Here!</button>
+    <p id="qpara"></p>
+</div>
+</div>
+    <script>
+        function randomQuoates(){
+            const arr = ['',
+                '"The only way to do great work is to love what you do',
+                'Believe you can and you re halfway there',
+                'Success is not final, failure is not fatal: It is the courage to continue that counts',
+                'The future belongs to those who believe in the beauty of their dreams." - Eleanor Roosevelt ',
+                'All our dreams can come true, if we have the courage to pursue them." - Walt Disney ',
+                'Do what you can, with what you have, where you are',
+                'It is never too late to be what you might have been',
+                'Don t let someone else s opinion of you become your reality',
+            ]
+            var q = Math.floor(Math.random()*arr.length);
+            document.getElementById('qpara').textContent=arr[q];
+            var randomColor = Math.floor(Math.random()*16777215).toString(16);
+            document.getElementById('qpara').style.backgroundColor="#"+randomColor;
+        }
+    </script>
+</body>
+</html>
