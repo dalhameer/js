@@ -13,6 +13,8 @@ body {
     background: #fff;
     width: 450px;
     border-radius: 6px;
+    box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
+
 }
 .form-group {
     max-width: 85%;
@@ -42,8 +44,7 @@ input#inp:focus {
     border: 1px solid #959595;
     outline: 0;
 }
-input#inp {
-    /* padding: 7px 67px; */
+input#inp {   
     border-radius: 2px;
     border: 2px solid  #ccc;
     width: 75%;
@@ -58,4 +59,14 @@ button.add {
     font-weight: bold;
 }
 
-button.cross {height: 32px;border: none;border-radius: 5px;background: #dddddd;}
+button.cross {
+    height: 32px;
+    border: none;
+    border-radius: 5px;
+    background: #dddddd;
+}
+
+button.add:hover {
+    background-color: black;
+    transition: 0.5s;
+}
