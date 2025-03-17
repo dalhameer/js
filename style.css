@@ -1,33 +1,40 @@
 body {
-    background-color: cadetblue;
+    background-color: #f7f7f7;
 }
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    
 }
 
 .todobox {
-    height: 200px;
-    background-color: rgba(255, 255, 255, 0.4);
-    width: 500px;
+    background: #fff;
+    width: 450px;
     border-radius: 6px;
 }
 .form-group {
     max-width: 85%;
     margin: auto;
     padding-top: 20px;
-    text-align: center;
+ 
 }
 li {
     color: black;
     display: flex;
     justify-content: space-between;
+    word-break: break-all;
+    align-items: center;
+    margin-bottom: 6px;
+    background-color: whitesmoke;
+    padding: 2px 6px;
+    border-radius: 4px;
 }
 ul#ul_id {
     list-style: none;
     padding-left: 0;
+  
 }
 button.cross {margin-left: 89px;}
 
@@ -36,15 +43,19 @@ input#inp:focus {
     outline: 0;
 }
 input#inp {
-    padding: 5px 18px;
-    border: none;
+    /* padding: 7px 67px; */
     border-radius: 2px;
+    border: 2px solid  #ccc;
+    width: 75%;
+    padding: 10px 2px;
 }
 button.add {
-    padding: 5px 16px;
-    background-color: #000000;
+    padding: 10px 20px;
+    background-color: #28a745;
     border: none;
     border-radius: 2px;
     color: white;
     font-weight: bold;
 }
+
+button.cross {height: 32px;border: none;border-radius: 5px;background: #dddddd;}
